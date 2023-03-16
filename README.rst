@@ -4,7 +4,7 @@ frontend-app-workshop-example
 Introduction
 ------------
 
-This is an example Micro-Frontend application to use as a starting point for the `Micro-Frontend Micro-Workshop <https://github.com/brian-smith-tcril/mfe-workshop-2023>`_, created using the `frontend-template-application <https://github.com/openedx/frontend-template-application>`_. This application utilizes `Paragon components <https://paragon-openedx.netlify.app/>`_ to display information retrieved from Open edX API endpoints. 
+This is an example Micro-Frontend application to use as a starting point for the `Micro-Frontend Micro-Workshop <https://github.com/brian-smith-tcril/mfe-workshop-2023>`_, created using the `frontend-template-application <https://github.com/openedx/frontend-template-application>`_. This application utilizes `Paragon components <https://paragon-openedx.netlify.app/>`_ to display information retrieved from the API. 
 
 Getting Started
 ---------------
