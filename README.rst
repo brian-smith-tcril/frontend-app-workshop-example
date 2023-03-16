@@ -1,76 +1,33 @@
-|Build Status| |Codecov| |license|
-
-frontend-template-application
-=================================
-
-Please tag **@edx/fedx-team** on any PRs or issues.  Thanks.
+frontend-app-workshop-example
+==============================
 
 Introduction
 ------------
 
-This repository is a template for Open edX micro-frontend applications. It is flagged as a Template Repository, meaning it can be used as a basis for new GitHub repositories by clicking the green "Use this template" button above.  The rest of this document describes how to work with your new micro-frontend after you've created a new repository from the template.
+This is an example Micro-Frontend application to use as a starting point for the `Micro-Frontend Micro-Workshop <https://github.com/brian-smith-tcril/mfe-workshop-2023>`_, created using the `frontend-template-application <https://github.com/openedx/frontend-template-application>`_. This application utilizes `Paragon components <https://paragon-openedx.netlify.app/>`_ to display information retrieved from Open edX API endpoints. 
 
-After Copying The Template
---------------------------
+Getting Started
+---------------
 
-You'll want to do a find-and-replace to replace all instances of ``frontend-template-application`` with the name of your new repository.  Also edit index.html to replace "Application Template" with a friendly name for this application that users will see in their browser tab.
+Prerequisites
+^^^^^^^^^^^^^
 
-**Prerequisite**
+* `devstack <https://github.com/brian-smith-tcril/mfe-workshop-2023#setting-up-devstack>`_
+* `nvm <https://github.com/nvm-sh/nvm>`_ (optional but recommended)
+* `node 16 <https://nodejs.dev/en/>`_
 
-`Devstack <https://edx.readthedocs.io/projects/edx-installing-configuring-and-running/en/latest/installation/index.html>`_.  If you start Devstack with ``make dev.up.ecommerce`` that should give you everything you need as a companion to this frontend.
+Running
+^^^^^^^
 
-**Installation and Startup**
+* Fork `the workshop example repo <https://github.com/brian-smith-tcril/frontend-app-workshop-example>`_
 
-In the following steps, replace "frontend-template-application' with the name of the repo you created when copying this template above.
+.. code::sh
 
-1. Clone your new repo:
+  $ git clone git@github.com:{YOUR_GITHUB_USERNAME}/frontend-app-workshop-example.git
+  $ cd frontend-app-workshop-example
+  $ nvm use
+  $ npm install
+  $ npm start
 
-  ``git clone https://github.com/openedx/frontend-template-application.git``
-
-2. Use node v12.x.
-
-   The micro-frontend build scripts support node 12.  Using other major versions of node *may* work, but is unsupported.  For convenience, this repository includes an .nvmrc file to help in setting the correct node version via `nvm <https://github.com/nvm-sh/nvm>`_.
-
-3. Install npm dependencies:
-
-  ``cd frontend-template-application && npm install``
-
-4. Update the application port to use for local development:
-
-   Default port is 8080. If this does not work for you, update the line `PORT=8080` to your port in all .env.* files
-
-5. Start the dev server:
-
-  ``npm start``
-
-The dev server is running at `http://localhost:8080 <http://localhost:8080>`_ or whatever port you setup.
-
-Making Your New Project's README File
--------------------------------------
-
-Move the file ``README-template-frontend-app.rst`` to your project's ``README.rst`` file. Please fill out all
-the sections - this helps out all developers understand your MFE, how to install it, and how to use it.
-
-Project Structure
------------------
-
-The source for this project is organized into nested submodules according to the ADR `Feature-based Application Organization <https://github.com/openedx/frontend-template-application/blob/master/docs/decisions/0002-feature-based-application-organization.rst>`_.
-
-Build Process Notes
--------------------
-
-**Production Build**
-
-The production build is created with ``npm run build``.
-
-Internationalization
---------------------
-
-Please see `edx/frontend-platform's i18n module <https://edx.github.io/frontend-platform/module-Internationalization.html>`_ for documentation on internationalization.  The documentation explains how to use it, and the `How To <https://github.com/openedx/frontend-i18n/blob/master/docs/how_tos/i18n.rst>`_ has more detail.
-
-.. |Build Status| image:: https://api.travis-ci.com/edx/frontend-template-application.svg?branch=master
-   :target: https://travis-ci.com/edx/frontend-template-application
-.. |Codecov| image:: https://codecov.io/gh/edx/frontend-template-application/branch/master/graph/badge.svg
-   :target: https://codecov.io/gh/edx/frontend-template-application
-.. |license| image:: https://img.shields.io/npm/l/@edx/frontend-template-application.svg
-   :target: @edx/frontend-template-application
+* Go to http://localhost:8080
+* todo: screenshots etc. of what you see when you get there
