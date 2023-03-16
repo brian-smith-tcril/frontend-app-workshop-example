@@ -19,9 +19,9 @@ Prerequisites
 Running
 ^^^^^^^
 
-* Fork `the workshop example repo <https://github.com/brian-smith-tcril/frontend-app-workshop-example>`_
+* Fork this repository
 
-.. code::sh
+.. code:: sh
 
   $ git clone git@github.com:{YOUR_GITHUB_USERNAME}/frontend-app-workshop-example.git
   $ cd frontend-app-workshop-example
