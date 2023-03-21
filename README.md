@@ -8,7 +8,7 @@ The sample applications are stored in separate branches within this repository a
 
 | |     Branch     | PR | Description |
 | - | - | - | - |
-| **Hello World** | [`hello-world`](https://github.com/brian-smith-tcril/frontend-app-workshop-example/tree/hello-world) | //todo | An example "Hello World" page. |
+| **Hello World** | [`hello-world`](https://github.com/brian-smith-tcril/frontend-app-workshop-example/tree/hello-world) | * https://github.com/brian-smith-tcril/frontend-app-workshop-example/pull/1 | An example "Hello World" page. |
 | **Hello Username**  | [`hello-username`](https://github.com/brian-smith-tcril/frontend-app-workshop-example/tree/hello-world) | //todo | Displays the username of the logged-in user. |
 | **Simple Paragon Component** | [`simple-paragon`](https://github.com/brian-smith-tcril/frontend-app-workshop-example/tree/hello-world) | //todo | Displays hardcoded test data in a [Paragon Carousel](https://paragon-openedx.netlify.app/components/carousel/)  component. |
 | **Simple API** | [`simple-api`](https://github.com/brian-smith-tcril/frontend-app-workshop-example/tree/hello-world) | //todo | Logs course listing data from the API to the console. |
