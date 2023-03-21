@@ -9,7 +9,7 @@ This repository contains example Micro-Frontend applications for use during the 
 The sample applications are stored in separate branches within this repository and are accompanied by corresponding Pull Requests that offer additional context and information.
 
 +-------------------------------+------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| Example Name                  | Branch     | Pull Request | Description                                                                                                                              |
+|                               | Branch     | PR           | Description                                                                                                                              |
 +===============================+============+==============+==========================================================================================================================================+
 | Hello World                   | //todo     | //todo       | An example "Hello World" page.                                                                                                           |
 +-------------------------------+------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+
