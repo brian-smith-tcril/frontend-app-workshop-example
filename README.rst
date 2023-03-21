@@ -4,7 +4,23 @@ frontend-app-workshop-example
 Introduction
 ------------
 
-This is an example Micro-Frontend application to use as a starting point for the `Micro-Frontend Micro-Workshop <https://github.com/brian-smith-tcril/mfe-workshop-2023>`_, created using the `frontend-template-application <https://github.com/openedx/frontend-template-application>`_. This application utilizes `Paragon components <https://paragon-openedx.netlify.app/>`_ to display information retrieved from the API. 
+This repository contains example Micro-Frontend applications for use during the `Micro-Frontend Micro-Workshop <https://github.com/brian-smith-tcril/mfe-workshop-2023>`_. It has been created using the `frontend-template-application <https://github.com/openedx/frontend-template-application>`_ template.
+
+The sample applications are stored in separate branches within this repository and are accompanied by corresponding Pull Requests that offer additional context and information.
+
++-------------------------------+------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| Example Name                  | Branch     | Pull Request | Description                                                                                                                              |
++===============================+============+==============+==========================================================================================================================================+
+| Hello World                   | //todo     | //todo       | An example "Hello World" page.                                                                                                           |
++-------------------------------+------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| Hello Username                | //todo     | //todo       | Displays the username of the logged-in user                                                                                              |
++-------------------------------+------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| Simple Paragon Component      | //todo     | //todo       | Displays hardcoded test data in a `Paragon Carousel <https://paragon-openedx.netlify.app/components/carousel/>`_  component              |
++-------------------------------+------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| Simple API                    | //todo     | //todo       | Logs course listing data from the API to the console                                                                                     |
++-------------------------------+------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| API Data in Paragon Component | //todo     | //todo       | Displays course listing data from the API in a `Paragon Carousel <https://paragon-openedx.netlify.app/components/carousel/>`_  component |
++-------------------------------+------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+
 
 Getting Started
 ---------------
