@@ -6,7 +6,7 @@ This repository contains example Micro-Frontend applications for use during the 
 
 The sample applications are stored in separate branches within this repository and are accompanied by corresponding Pull Requests that offer additional context and information.
 
-| |       Branch       | PR | Description |
+| |     Branch     | PR | Description |
 | - | - | - | - |
 | **Hello World** | [`hello-world`](https://github.com/brian-smith-tcril/frontend-app-workshop-example/tree/hello-world) | //todo | An example "Hello World" page. |
 | **Hello Username**  | [`hello-username`](https://github.com/brian-smith-tcril/frontend-app-workshop-example/tree/hello-world) | //todo | Displays the username of the logged-in user. |
