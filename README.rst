@@ -8,34 +8,19 @@ This repository contains example Micro-Frontend applications for use during the 
 
 The sample applications are stored in separate branches within this repository and are accompanied by corresponding Pull Requests that offer additional context and information.
 
-.. list-table::
-   :widths: 15 10 30 30
-   :header-rows: 1
-
-   * - 
-     - Branch
-     - PR
-     - Description
-   * - **Hello World**
-     - |helloworldbranch|_
-     - //todo
-     - An example "Hello World" page.
-   * - **Hello Username**
-     - //todo
-     - //todo
-     - Displays the username of the logged-in user
-   * - **Simple Paragon Component**
-     - //todo
-     - //todo
-     - Displays hardcoded test data in a `Paragon Carousel <https://paragon-openedx.netlify.app/components/carousel/>`_  component
-   * - **Simple API**
-     - //todo
-     - //todo
-     - Logs course listing data from the API to the console
-   * - **API Data in Paragon Component**
-     - //todo
-     - //todo
-     - Displays course listing data from the API in a `Paragon Carousel <https://paragon-openedx.netlify.app/components/carousel/>`_  component
++-----------------------------------+---------------------------------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+
+|                                   |                 Branch                | PR           | Description                                                                                                                              |
++===================================+=======================================+==============+==========================================================================================================================================+
+| **Hello World**                   | |helloworldbranch|_                   | //todo       | An example "Hello World" page.                                                                                                           |
++-----------------------------------+---------------------------------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| **Hello Username**                | //todo                                | //todo       | Displays the username of the logged-in user                                                                                              |
++-----------------------------------+---------------------------------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| **Simple Paragon Component**      | //todo                                | //todo       | Displays hardcoded test data in a `Paragon Carousel <https://paragon-openedx.netlify.app/components/carousel/>`_  component              |
++-----------------------------------+---------------------------------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| **Simple API**                    | //todo                                | //todo       | Logs course listing data from the API to the console                                                                                     |
++-----------------------------------+---------------------------------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| **API Data in Paragon Component** | //todo                                | //todo       | Displays course listing data from the API in a `Paragon Carousel <https://paragon-openedx.netlify.app/components/carousel/>`_  component |
++-----------------------------------+---------------------------------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+
 
 Getting Started
 ---------------
