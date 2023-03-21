@@ -7,12 +7,12 @@ This repository contains example Micro-Frontend applications for use during the 
 The sample applications are stored in separate branches within this repository and are accompanied by corresponding Pull Requests that offer additional context and information.
 
 | |     Branch     | PR | Description |
-| - | - | - | - |
-| **Hello World** | [`hello-world`](https://github.com/brian-smith-tcril/frontend-app-workshop-example/tree/hello-world) | * https://github.com/brian-smith-tcril/frontend-app-workshop-example/pull/1 | An example "Hello World" page. |
-| **Hello Username**  | [`hello-username`](https://github.com/brian-smith-tcril/frontend-app-workshop-example/tree/hello-world) | //todo | Displays the username of the logged-in user. |
-| **Simple Paragon Component** | [`simple-paragon`](https://github.com/brian-smith-tcril/frontend-app-workshop-example/tree/hello-world) | //todo | Displays hardcoded test data in a [Paragon Carousel](https://paragon-openedx.netlify.app/components/carousel/)  component. |
-| **Simple API** | [`simple-api`](https://github.com/brian-smith-tcril/frontend-app-workshop-example/tree/hello-world) | //todo | Logs course listing data from the API to the console. |
-| **API Data in Paragon Component** | [`paragon-api`](https://github.com/brian-smith-tcril/frontend-app-workshop-example/tree/hello-world) | //todo | Displays course listing data from the API in a [Paragon Carousel](https://paragon-openedx.netlify.app/components/carousel/)  component. |
+| - | - | :---: | - |
+| **Hello World** | [`hello-world`](https://github.com/brian-smith-tcril/frontend-app-workshop-example/tree/hello-world) | [![PR Opened](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/PullRequestOpened.svg)](https://github.com/brian-smith-tcril/frontend-app-workshop-example/pull/1) | An example "Hello World" page. |
+| **Hello Username**  | [`hello-username`](https://github.com/brian-smith-tcril/frontend-app-workshop-example/tree/hello-world) | [![PR Opened](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/PullRequestOpened.svg)](https://github.com/brian-smith-tcril/frontend-app-workshop-example/pull/1) | Displays the username of the logged-in user. |
+| **Simple Paragon Component** | [`simple-paragon`](https://github.com/brian-smith-tcril/frontend-app-workshop-example/tree/hello-world) | [![PR Opened](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/PullRequestOpened.svg)](https://github.com/brian-smith-tcril/frontend-app-workshop-example/pull/1) | Displays hardcoded test data in a [Paragon Carousel](https://paragon-openedx.netlify.app/components/carousel/)  component. |
+| **Simple API** | [`simple-api`](https://github.com/brian-smith-tcril/frontend-app-workshop-example/tree/hello-world) | [![PR Opened](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/PullRequestOpened.svg)](https://github.com/brian-smith-tcril/frontend-app-workshop-example/pull/1) | Logs course listing data from the API to the console. |
+| **API Data in Paragon Component** | [`paragon-api`](https://github.com/brian-smith-tcril/frontend-app-workshop-example/tree/hello-world) | [![PR Opened](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/PullRequestOpened.svg)](https://github.com/brian-smith-tcril/frontend-app-workshop-example/pull/1) | Displays course listing data from the API in a [Paragon Carousel](https://paragon-openedx.netlify.app/components/carousel/)  component. |
 
 
 ## Getting Started
