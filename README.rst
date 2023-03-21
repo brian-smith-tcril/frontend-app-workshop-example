@@ -12,7 +12,7 @@ The sample applications are stored in separate branches within this repository a
    :header-rows: 1
 
    * - 
-     - Branch
+     -    Branch   
      - PR
      - Description
    * - **Hello World**
