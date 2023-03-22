@@ -1,3 +1,2 @@
-export { default as counterReducer } from './data/counterSlice';
+export { coursesApi } from './data/coursesApiService';
 export { default as ExamplePage } from './ExamplePage';
-export { pokemonApi } from './data/pokeApiService';

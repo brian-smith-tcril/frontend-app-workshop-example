@@ -1,11 +1,11 @@
 import { Container } from '@edx/paragon';
-import { useGetPokemonByNameQuery } from './data/pokeApiService'
+import { useGetCoursesQuery } from './data/coursesApiService'
 
 const ExamplePage = () => {
-  const { data, error, isLoading } = useGetPokemonByNameQuery('bulbasaur')
+  const { data, error, isLoading } = useGetCoursesQuery()
   
   if (data) {
-    console.log(data.species.name);
+    console.log(data);
   }
 
   return (
