@@ -22,6 +22,7 @@ export function* handleFetchCourses(action) {
   const isAuthenticatedUserProfile = username === getAuthenticatedUser().username;
   // Default our data assuming the account is the current user's account.
   let account = userAccount;
+  let courses = null;
 
   try {
     yield put(fetchCoursesBegin());
@@ -30,7 +31,7 @@ export function* handleFetchCourses(action) {
 
     if (isAuthenticatedUserProfile) {
       calls.push(call(CoursesApiService.getAccount, username));
-    };
+    }
     calls.push(call(CoursesApiService.getCourses, username));
 
     // Make all the calls in parallel.

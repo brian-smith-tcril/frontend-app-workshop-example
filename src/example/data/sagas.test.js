@@ -2,7 +2,6 @@ import {
   takeEvery,
   put,
   call,
-  delay,
   select,
   all,
 } from 'redux-saga/effects';
@@ -100,7 +99,7 @@ describe('RootSaga', () => {
         userAccount,
       };
 
-      const action = profileActions.fetchCourses('gonzo');
+      const action = coursesActions.fetchCourses('gonzo');
       const gen = handleFetchCourses(action);
 
       const result = [userAccount, [1, 2, 3]];
