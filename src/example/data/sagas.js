@@ -17,7 +17,8 @@ import { userAccountSelector } from './selectors';
 import * as CoursesApiService from './service';
 
 export function* handleFetchCourses(action) {
-  const { username } = action.payload;
+  const { username } = action.payload ? action.payload : {username: ''};
+  
   const userAccount = yield select(userAccountSelector);
   const isAuthenticatedUserProfile = username === getAuthenticatedUser().username;
   // Default our data assuming the account is the current user's account.
