@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { Carousel } from '@edx/paragon';
 
 const examplePrevIcon = (
@@ -27,5 +29,9 @@ const ExampleCarousel = ({ carouselData }) => (
     ))}
   </Carousel>
 );
+
+ExampleCarousel.propTypes = {
+  carouselData: PropTypes.arrayOf(PropTypes.object),
+}
 
 export default ExampleCarousel;
