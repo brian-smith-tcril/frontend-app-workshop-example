@@ -37,7 +37,7 @@ export function* handleFetchCourses(action) {
     const result = yield all(calls);
 
     [account, courses] = result;
-    
+
     yield put(fetchCoursesSuccess(
       account,
       courses,
