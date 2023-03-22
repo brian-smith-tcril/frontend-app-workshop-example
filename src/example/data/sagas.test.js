@@ -40,25 +40,6 @@ describe('RootSaga', () => {
   });
 
   describe('handleFetchCourses', () => {
-    it('should fetch courses without a logged in user', () => {
-      const selectorData = {};
-
-      const action = coursesActions.fetchCourses();
-      const gen = handleFetchCourses(action);
-
-      const result = [[1, 2, 3]];
-
-      expect(gen.next().value).toEqual(select(userAccountSelector));
-      expect(gen.next(selectorData).value).toEqual(put(coursesActions.fetchCoursesBegin()));
-      expect(gen.next().value).toEqual(all([
-        call(CoursesApiService.getCourses),
-      ]));
-      expect(gen.next(result).value)
-        .toEqual(put(coursesActions.fetchProfileSuccess(result[1], true)));
-      expect(gen.next().value).toEqual(put(coursesActions.fetchCoursesReset()));
-      expect(gen.next().value).toBeUndefined();
-    });
-
     it('should fetch courses for the current user profile', () => {
       const userAccount = {
         username: 'gonzo',

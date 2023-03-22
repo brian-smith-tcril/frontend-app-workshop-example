@@ -17,7 +17,7 @@ import { userAccountSelector } from './selectors';
 import * as CoursesApiService from './service';
 
 export function* handleFetchCourses(action) {
-  const { username } = action.payload ? action.payload : { username: '' };
+  const { username } = action.payload;
 
   const userAccount = yield select(userAccountSelector);
   const isAuthenticatedUserProfile = username === getAuthenticatedUser().username;
@@ -28,21 +28,16 @@ export function* handleFetchCourses(action) {
   try {
     yield put(fetchCoursesBegin());
 
-    const calls = [];
-
-    if (isAuthenticatedUserProfile) {
-      calls.push(call(CoursesApiService.getAccount, username));
-    }
-    calls.push(call(CoursesApiService.getCourses, username));
+    const calls = [
+      call(CoursesApiService.getAccount, username),
+      call(CoursesApiService.getCourses, username),
+    ];
 
     // Make all the calls in parallel.
     const result = yield all(calls);
 
-    if (isAuthenticatedUserProfile) {
-      [account, courses] = result;
-    } else {
-      [courses] = result;
-    }
+    [account, courses] = result;
+    
     yield put(fetchCoursesSuccess(
       account,
       courses,
