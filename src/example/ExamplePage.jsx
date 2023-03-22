@@ -1,8 +1,8 @@
 import { Container } from '@edx/paragon';
-import { useGetCoursesQuery } from './data/coursesApiService'
+import { useGetCoursesQuery } from './data/coursesApiService';
 
 const ExamplePage = () => {
-  const { data, error, isLoading } = useGetCoursesQuery()
+  const { data } = useGetCoursesQuery();
   
   if (data) {
     console.log(data);
