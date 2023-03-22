@@ -4,16 +4,8 @@ import {
 
 export const initialState = {
   errors: {},
-  saveState: null,
-  savePhotoState: null,
-  currentlyEditingField: null,
-  account: {
-    socialLinks: [],
-  },
-  preferences: {},
-  courseCertificates: [],
-  drafts: {},
-  isLoadingProfile: true,
+  account: {},
+  courses: [],
   isAuthenticatedUserProfile: false,
 };
 
@@ -27,8 +19,7 @@ const examplePage = (state = initialState, action = {}) => {
       return {
         ...state,
         account: action.account,
-        preferences: action.preferences,
-        courseCertificates: action.courseCertificates,
+        courses: action.courses,
         isLoadingProfile: false,
         isAuthenticatedUserProfile: action.isAuthenticatedUserProfile,
       };

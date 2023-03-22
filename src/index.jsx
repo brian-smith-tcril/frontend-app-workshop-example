@@ -12,13 +12,13 @@ import Footer, { messages as footerMessages } from '@edx/frontend-component-foot
 
 import appMessages from './i18n';
 import ExamplePage from './example/ExamplePage';
-// import configureStore from './data/configureStore';
+import configureStore from './data/configureStore';
 
 import './index.scss';
 
 subscribe(APP_READY, () => {
   ReactDOM.render(
-    <AppProvider>
+    <AppProvider store={configureStore()}>
       <Header />
       <ExamplePage />
       <Footer />
@@ -37,4 +37,5 @@ initialize({
     headerMessages,
     footerMessages,
   ],
+  hydrateAuthenticatedUser: true,
 });

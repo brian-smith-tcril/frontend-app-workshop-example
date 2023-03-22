@@ -15,14 +15,12 @@ export const fetchCoursesBegin = () => ({
 
 export const fetchCoursesSuccess = (
   account,
-  preferences,
-  courseCertificates,
+  courses,
   isAuthenticatedUserProfile,
 ) => ({
   type: FETCH_COURSES.SUCCESS,
   account,
-  preferences,
-  courseCertificates,
+  courses,
   isAuthenticatedUserProfile,
 });
 
