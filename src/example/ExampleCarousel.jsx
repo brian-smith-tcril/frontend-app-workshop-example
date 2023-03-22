@@ -57,7 +57,7 @@ const ExampleCarousel = () => (
   <Carousel prevIcon={examplePrevIcon} nextIcon={exampleNextIcon}>
     {exampleCarouselData.map(carouselEntryData => (
       <Carousel.Item>
-        <div class="img-gradient">
+        <div className="img-gradient">
           <img
             className="d-block w-100"
             src={carouselEntryData.imageUrl}
@@ -65,10 +65,10 @@ const ExampleCarousel = () => (
           />
         </div>
         <Carousel.Caption>
-          <h1 style={{color: "white"}}>{carouselEntryData.title}</h1>
+          <h1 style={{ color: "white" }}>{carouselEntryData.title}</h1>
           <p>{carouselEntryData.description}</p>
         </Carousel.Caption>
-      </Carousel.Item>  
+      </Carousel.Item>
     ))}
   </Carousel>
 );
