@@ -1,10 +1,8 @@
-import { configureStore } from '@reduxjs/toolkit'
-import { setupListeners } from '@reduxjs/toolkit/query'
-import { coursesApi } from '../example'
+import { configureStore } from '@reduxjs/toolkit';
+import { setupListeners } from '@reduxjs/toolkit/query';
+import { coursesApi } from '../example';
 
-// import { counterReducer } from '../example'
-
-export const store = configureStore({
+const store = configureStore({
   reducer: {
     // Add the generated reducer as a specific top-level slice
     [coursesApi.reducerPath]: coursesApi.reducer,
@@ -16,3 +14,5 @@ export const store = configureStore({
 })
 
 setupListeners(store.dispatch)
+
+export default store;
