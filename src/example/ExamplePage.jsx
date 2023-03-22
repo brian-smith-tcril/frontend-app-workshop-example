@@ -1,12 +1,19 @@
 import { Container } from '@edx/paragon';
+import { useGetCoursesQuery } from './data/coursesApiService';
+import ExampleCarousel from './ExampleCarousel';
 
-const ExamplePage = () => (
-  <main>
-    <Container className="py-5">
-      <h1>Example Page</h1>
-      <p>Hello world!</p>
-    </Container>
-  </main>
-);
+const ExamplePage = () => {
+  const { data, error, isLoading } = useGetCoursesQuery();
+
+  return (
+    <main>
+      <Container className="py-5">
+        {error && <>Oh no, there was an error</>}
+        {isLoading && <>Loading...</>}
+        {data && <ExampleCarousel carouselData={data} />}
+      </Container>
+    </main>
+  );
+};
 
 export default ExamplePage;
