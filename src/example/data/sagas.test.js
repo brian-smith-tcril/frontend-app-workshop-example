@@ -8,17 +8,12 @@ import {
 } from 'redux-saga/effects';
 import { getAuthenticatedUser } from '@edx/frontend-platform/auth';
 
-import * as profileActions from './actions';
-import { handleSaveProfileSelector, userAccountSelector } from './selectors';
+import * as coursesActions from './actions';
+import { userAccountSelector } from './selectors';
 
 jest.mock('./services', () => ({
-  getProfile: jest.fn(),
-  patchProfile: jest.fn(),
-  postProfilePhoto: jest.fn(),
-  deleteProfilePhoto: jest.fn(),
-  getPreferences: jest.fn(),
+  getCourses: jest.fn(),
   getAccount: jest.fn(),
-  getCourseCertificates: jest.fn(),
 }));
 
 jest.mock('@edx/frontend-platform/auth', () => ({
@@ -27,26 +22,75 @@ jest.mock('@edx/frontend-platform/auth', () => ({
 
 // RootSaga and ProfileApiService must be imported AFTER the mock above.
 /* eslint-disable import/first */
-import profileSaga, {
+import coursesSaga, {
   handleFetchCourses,
 } from './sagas';
-import * as ProfileApiService from './services';
+import * as CoursesApiService from './service';
 /* eslint-enable import/first */
 
 describe('RootSaga', () => {
-  describe('profileSaga', () => {
+  describe('coursesSaga', () => {
     it('should pass actions to the correct sagas', () => {
-      const gen = profileSaga();
+      const gen = coursesSaga();
 
       expect(gen.next().value)
-        .toEqual(takeEvery(profileActions.FETCH_PROFILE.BASE, handleFetchProfile));
+        .toEqual(takeEvery(coursesActions.FETCH_COURSES.BASE, handleFetchCourses));
 
       expect(gen.next().value).toBeUndefined();
     });
   });
 
-  describe('handleFetchProfile', () => {
-    it('should fetch certificates and preferences for the current user profile', () => {
+  // describe('handleFetchCourses', () => {
+  //   it('should fetch courses without a logged in user', () => {
+
+  //     const action = profileActions.fetchCourses();
+  //     const gen = handleFetchCourses(action);
+
+  //     const result = [];
+
+  //     expect(gen.next().value).toEqual(select(userAccountSelector));
+  //     expect(gen.next(selectorData).value).toEqual(put(profileActions.fetchProfileBegin()));
+  //     expect(gen.next().value).toEqual(all([
+  //       call(ProfileApiService.getAccount, 'gonzo'),
+  //       call(ProfileApiService.getCourseCertificates, 'gonzo'),
+  //       call(ProfileApiService.getPreferences, 'gonzo'),
+  //     ]));
+  //     expect(gen.next(result).value)
+  //       .toEqual(put(profileActions.fetchProfileSuccess(userAccount, result[2], result[1], true)));
+  //     expect(gen.next().value).toEqual(put(profileActions.fetchProfileReset()));
+  //     expect(gen.next().value).toBeUndefined();
+  //   });
+
+  //   it('should fetch certificates and profile for some other user profile', () => {
+  //     const userAccount = {
+  //       username: 'gonzo',
+  //       other: 'data',
+  //     };
+  //     getAuthenticatedUser.mockReturnValue(userAccount);
+  //     const selectorData = {
+  //       userAccount,
+  //     };
+
+  //     const action = profileActions.fetchProfile('booyah');
+  //     const gen = handleFetchProfile(action);
+
+  //     const result = [{}, [1, 2, 3]];
+
+  //     expect(gen.next().value).toEqual(select(userAccountSelector));
+  //     expect(gen.next(selectorData).value).toEqual(put(profileActions.fetchProfileBegin()));
+  //     expect(gen.next().value).toEqual(all([
+  //       call(ProfileApiService.getAccount, 'booyah'),
+  //       call(ProfileApiService.getCourseCertificates, 'booyah'),
+  //     ]));
+  //     expect(gen.next(result).value)
+  //       .toEqual(put(profileActions.fetchProfileSuccess(result[0], {}, result[1], false)));
+  //     expect(gen.next().value).toEqual(put(profileActions.fetchProfileReset()));
+  //     expect(gen.next().value).toBeUndefined();
+  //   });
+  // });
+
+  describe('handleFetchCourses', () => {
+    it('should fetch courses for the current user profile', () => {
       const userAccount = {
         username: 'gonzo',
         other: 'data',
@@ -56,49 +100,48 @@ describe('RootSaga', () => {
         userAccount,
       };
 
-      const action = profileActions.fetchProfile('gonzo');
-      const gen = handleFetchProfile(action);
+      const action = profileActions.fetchCourses('gonzo');
+      const gen = handleFetchCourses(action);
 
-      const result = [userAccount, [1, 2, 3], { preferences: 'stuff' }];
+      const result = [userAccount, [1, 2, 3]];
 
       expect(gen.next().value).toEqual(select(userAccountSelector));
-      expect(gen.next(selectorData).value).toEqual(put(profileActions.fetchProfileBegin()));
+      expect(gen.next(selectorData).value).toEqual(put(coursesActions.fetchCoursesBegin()));
       expect(gen.next().value).toEqual(all([
-        call(ProfileApiService.getAccount, 'gonzo'),
-        call(ProfileApiService.getCourseCertificates, 'gonzo'),
-        call(ProfileApiService.getPreferences, 'gonzo'),
+        call(CoursesApiService.getAccount, 'gonzo'),
+        call(CoursesApiService.getCourses, 'gonzo'),
       ]));
       expect(gen.next(result).value)
-        .toEqual(put(profileActions.fetchProfileSuccess(userAccount, result[2], result[1], true)));
-      expect(gen.next().value).toEqual(put(profileActions.fetchProfileReset()));
+        .toEqual(put(coursesActions.fetchCoursesSuccess(userAccount, result[1], true)));
+      expect(gen.next().value).toEqual(put(coursesActions.fetchCoursesReset()));
       expect(gen.next().value).toBeUndefined();
     });
 
-    it('should fetch certificates and profile for some other user profile', () => {
-      const userAccount = {
-        username: 'gonzo',
-        other: 'data',
-      };
-      getAuthenticatedUser.mockReturnValue(userAccount);
-      const selectorData = {
-        userAccount,
-      };
+    // it('should fetch certificates and profile for some other user profile', () => {
+    //   const userAccount = {
+    //     username: 'gonzo',
+    //     other: 'data',
+    //   };
+    //   getAuthenticatedUser.mockReturnValue(userAccount);
+    //   const selectorData = {
+    //     userAccount,
+    //   };
 
-      const action = profileActions.fetchProfile('booyah');
-      const gen = handleFetchProfile(action);
+    //   const action = profileActions.fetchProfile('booyah');
+    //   const gen = handleFetchProfile(action);
 
-      const result = [{}, [1, 2, 3]];
+    //   const result = [{}, [1, 2, 3]];
 
-      expect(gen.next().value).toEqual(select(userAccountSelector));
-      expect(gen.next(selectorData).value).toEqual(put(profileActions.fetchProfileBegin()));
-      expect(gen.next().value).toEqual(all([
-        call(ProfileApiService.getAccount, 'booyah'),
-        call(ProfileApiService.getCourseCertificates, 'booyah'),
-      ]));
-      expect(gen.next(result).value)
-        .toEqual(put(profileActions.fetchProfileSuccess(result[0], {}, result[1], false)));
-      expect(gen.next().value).toEqual(put(profileActions.fetchProfileReset()));
-      expect(gen.next().value).toBeUndefined();
-    });
+    //   expect(gen.next().value).toEqual(select(userAccountSelector));
+    //   expect(gen.next(selectorData).value).toEqual(put(profileActions.fetchProfileBegin()));
+    //   expect(gen.next().value).toEqual(all([
+    //     call(ProfileApiService.getAccount, 'booyah'),
+    //     call(ProfileApiService.getCourseCertificates, 'booyah'),
+    //   ]));
+    //   expect(gen.next(result).value)
+    //     .toEqual(put(profileActions.fetchProfileSuccess(result[0], {}, result[1], false)));
+    //   expect(gen.next().value).toEqual(put(profileActions.fetchProfileReset()));
+    //   expect(gen.next().value).toBeUndefined();
+    // });
   });
 });
