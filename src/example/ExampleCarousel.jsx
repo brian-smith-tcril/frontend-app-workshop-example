@@ -31,7 +31,12 @@ const ExampleCarousel = ({ carouselData }) => (
 );
 
 ExampleCarousel.propTypes = {
-  carouselData: PropTypes.arrayOf(PropTypes.object),
+  carouselData: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string,
+    description: PropTypes.string,
+    imageUrl: PropTypes.string,
+    imageAltText: PropTypes.string
+  })).isRequired,
 }
 
 export default ExampleCarousel;
