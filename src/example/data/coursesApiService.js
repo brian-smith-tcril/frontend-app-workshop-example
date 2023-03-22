@@ -7,7 +7,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 // Define a service using a base URL and expected endpoints
 export const coursesApi = createApi({
-  reducerPath: 'pokemonApi',
+  reducerPath: 'coursesApi',
   baseQuery: fetchBaseQuery({ baseUrl: `${getConfig().LMS_BASE_URL}/api/` }),
   endpoints: (builder) => ({
     getCourses: builder.query({
