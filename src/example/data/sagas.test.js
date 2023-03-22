@@ -41,7 +41,6 @@ describe('RootSaga', () => {
 
   describe('handleFetchCourses', () => {
     it('should fetch courses without a logged in user', () => {
-
       const action = coursesActions.fetchCourses();
       const gen = handleFetchCourses(action);
 
