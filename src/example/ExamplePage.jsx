@@ -3,7 +3,7 @@ import { useGetCoursesQuery } from './data/coursesApiService';
 
 const ExamplePage = () => {
   const { data } = useGetCoursesQuery();
-  
+
   if (data) {
     console.log(data);
   }
@@ -16,6 +16,6 @@ const ExamplePage = () => {
       </Container>
     </main>
   );
-}
+};
 
 export default ExamplePage;
