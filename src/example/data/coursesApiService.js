@@ -12,6 +12,12 @@ export const coursesApi = createApi({
   endpoints: (builder) => ({
     getCourses: builder.query({
       query: () => 'courses/v1/courses/',
+      transformResponse: (response) => response.results.map(entry => ({
+        title: entry.name,
+        description: entry.short_description,
+        imageUrl: entry.media.banner_image.uri_absolute,
+        imageAltText: "API does not return alt text for images"
+      })),
     }),
   }),
 });
