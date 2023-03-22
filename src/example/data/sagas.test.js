@@ -10,7 +10,7 @@ import { getAuthenticatedUser } from '@edx/frontend-platform/auth';
 import * as coursesActions from './actions';
 import { userAccountSelector } from './selectors';
 
-jest.mock('./services', () => ({
+jest.mock('./service', () => ({
   getCourses: jest.fn(),
   getAccount: jest.fn(),
 }));
