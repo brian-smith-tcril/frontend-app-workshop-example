@@ -16,7 +16,7 @@ export const coursesApi = createApi({
         title: entry.name,
         description: entry.short_description,
         imageUrl: entry.media.banner_image.uri_absolute,
-        imageAltText: "API does not return alt text for images"
+        imageAltText: 'API does not return alt text for images',
       })),
     }),
   }),

@@ -35,8 +35,8 @@ ExampleCarousel.propTypes = {
     title: PropTypes.string,
     description: PropTypes.string,
     imageUrl: PropTypes.string,
-    imageAltText: PropTypes.string
+    imageAltText: PropTypes.string,
   })).isRequired,
-}
+};
 
 export default ExampleCarousel;

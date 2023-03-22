@@ -8,13 +8,9 @@ const ExamplePage = () => {
   return (
     <main>
       <Container className="py-5">
-        {error ? (
-          <>Oh no, there was an error</>
-        ) : isLoading ? (
-          <>Loading...</>
-        ) : data ? (
-          <ExampleCarousel carouselData={data}/>
-        ) : null}
+        {error && <>Oh no, there was an error</>}
+        {isLoading && <>Loading...</>}
+        {data && <ExampleCarousel carouselData={data} />}
       </Container>
     </main>
   );
