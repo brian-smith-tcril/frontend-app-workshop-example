@@ -65,7 +65,7 @@ const ExampleCarousel = () => (
           />
         </div>
         <Carousel.Caption>
-          <h1 style={{ color: "white" }}>{carouselEntryData.title}</h1>
+          <h1 style={{ color: 'white' }}>{carouselEntryData.title}</h1>
           <p>{carouselEntryData.description}</p>
         </Carousel.Caption>
       </Carousel.Item>
