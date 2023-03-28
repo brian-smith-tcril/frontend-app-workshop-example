@@ -27,7 +27,7 @@ The sample applications are stored in separate branches within this repository a
 
 * Fork this repository (optional)
   * Ensure "Copy the `hello-world` branch only" is unchecked
-* Clone and run
+* Clone this repository
 ```sh
 $ git clone git@github.com:{YOUR_GITHUB_USERNAME}/frontend-app-workshop-example.git
 ```
