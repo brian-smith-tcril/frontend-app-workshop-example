@@ -25,10 +25,19 @@ The sample applications are stored in separate branches within this repository a
 
 ### Running
 
-* Fork this repository
-
+* Fork this repository (optional)
+  * Ensure "Copy the `hello-world` branch only" is unchecked
+* Clone and run
 ```sh
 $ git clone git@github.com:{YOUR_GITHUB_USERNAME}/frontend-app-workshop-example.git
+```
+OR
+```sh
+$ git clone https://github.com/brian-smith-tcril/frontend-app-workshop-example.git
+```
+
+* Run the MFE
+```sh
 $ cd frontend-app-workshop-example
 $ nvm use
 $ npm install
